@@ -13,6 +13,7 @@ class Product extends Model
         'color',
         'type',
         'image',
-        'createdBy'
+        'createdBy',
+        'productDetail'
     ];
 }
