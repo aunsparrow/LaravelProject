@@ -21,7 +21,7 @@ Shifts for *Laravel* include:
 - [Laravel Linter - detect lint in your Laravel project](https://laravelshift.com/laravel-linter) 
 - [Laravel Analyzer - are you following the "Laravel Way"](https://laravelshift.com/opinionated-laravel-way-shift) 
 - [Laravel Fixer - automate changes to the "Laravel Way"](https://laravelshift.com/laravel-code-fixer) 
-- [Consolidate Namespace Shift - condense custom namespaces with Laravel](https://laravelshift.com/laravel-consolidate-custom-namespaces)
+- [Consolidate Namespace Shift - condense custom namespaces with Laravel](https://laravelshift.com/laravel-consolidate-custom-namespaces) test
 
 
 Shifts for *Lumen* include:
