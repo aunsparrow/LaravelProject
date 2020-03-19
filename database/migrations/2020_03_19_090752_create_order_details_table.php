@@ -15,12 +15,12 @@ class CreateOrderDetailsTable extends Migration
     {
         Schema::create('order_details', function (Blueprint $table) {
             $table->Increments('id');
-            $table->int('orderId')->references('id')->on('orders');
-            $table->int('productId')->references('id')->on('products');
-            $table->int('quantity ')->default(0); 
-            $table->float('totalPrice ')->default(0);
+            $table->integer('orderId')->references('id')->on('orders');
+            $table->integer('productId')->references('id')->on('products');
+            $table->integer('quantity')->default(0);
+            $table->float('totalPrice')->default(0);
             $table->string('email')->nullable();
-            $table->int('updateBy ')->default(0);
+            $table->integer('updateBy')->default(0);
             $table->timestamps();
         });
     }

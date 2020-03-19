@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->string('color')->nullable();
             $table->string('type')->nullable();
             $table->string('image')->nullable();
-            $table->int('createdBy')->default(0);
+            $table->integer('createdBy')->default(0);
             $table->timestamps();
         });
     }

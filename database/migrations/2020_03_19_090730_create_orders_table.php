@@ -15,8 +15,8 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->Increments('id');
-            $table->int('orderDetailId')->references('id')->on('orders_details');
-            $table->int('updateBy')->default(0);
+            $table->integer('orderDetailId')->references('id')->on('order_details');
+            $table->integer('updateBy')->default(0);
             $table->string('email')->nullable();
             $table->timestamps();
         });
