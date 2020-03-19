@@ -33,7 +33,7 @@
                                 <td>
                                     <img src="{{ asset($product->image) }}" width="200px">
                                 </td>
-                                <td>{{ $product->name }}</td>
+                                <td>{{ $product->productName }}</td>
                                 <td>{{ $product->color }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>
