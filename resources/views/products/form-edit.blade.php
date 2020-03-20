@@ -14,7 +14,11 @@
                             @method('PUT')
                             <div class="form-group">
                                 <label>ชื่อ</label>
-                                <input class="form-control" placeholder="ชื่อสินค้า" name="name" type="text" value="{{ isset($product->name) ? $product->name: '' }}" required>
+                                <input class="form-control" placeholder="ชื่อสินค้า" name="name" type="text" value="{{ isset($product->productName) ? $product->productName: '' }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label>รายละเอียด</label>
+                                <input class="form-control" placeholder="รายละเอียด" name="detail" type="text" value="{{ isset($product->productDetail) ? $product->productDetail: '' }}" required>
                             </div>
                             <div class="form-group">
                                 <label>ราคา</label>
