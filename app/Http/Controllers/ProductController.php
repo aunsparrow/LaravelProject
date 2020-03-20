@@ -55,13 +55,14 @@ class ProductController extends Controller
             ]);
         }
         $creted = Product::create([
-            'productName' => $request->productName,
+            'productName' => $request->name,
+            'productDetail' => $request->detail,
             'price' => $request->price,
             'quantity' => $request->quantity,
             'color' => $request->color,
             'type' => $request->type,
-            'image' => 'images/'. $filename ?: null,
-            'created_by' => $request->createdBy
+            'image' => 'images/'. $filename,
+            'createdBy' => $request->created_by
         ]);
         return redirect(route('products.index'))->with([
             'status' => [
@@ -103,7 +104,8 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $updated = Product::where('id', $id)->update([
-            'productName' => $request->productName,
+            'productName' => $request->name,
+            'productDetail' => $request->detail,
             'price' => $request->price,
             'quantity' => $request->quantity,
             'color' => $request->color,
