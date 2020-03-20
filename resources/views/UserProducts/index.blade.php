@@ -12,7 +12,7 @@
     <div class="card-body">
     <h5 class="card-title">{{ $product->productName }}</h5>
     <p class="card-text">{{$product->color}}</p>    
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="{{ route('UserProducts.shopshow',['id' => $product->id]) }}" class="btn btn-primary" style="float: right;"><i class="fas fa-shopping-cart"></i></a>
     </div>
     </div>
         </div>

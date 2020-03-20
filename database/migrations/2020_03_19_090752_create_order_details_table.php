@@ -19,7 +19,6 @@ class CreateOrderDetailsTable extends Migration
             $table->integer('productId')->references('id')->on('products');
             $table->integer('quantity')->default(0);
             $table->float('totalPrice')->default(0);
-            $table->string('email')->nullable();
             $table->integer('updateBy')->default(0);
             $table->timestamps();
         });

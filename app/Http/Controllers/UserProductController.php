@@ -22,6 +22,12 @@ class UserProductController extends Controller
         return view('UserProducts.index')->with(['products' => $products]);
     }
 
+    public function shopshow($id)
+    {
+        //
+
+        return view('UserProducts.shop')->with(['products' => Product::find($id)]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -41,6 +47,13 @@ class UserProductController extends Controller
     public function store(Request $request)
     {
         //
+        $creted = OrderDetail::create([
+            'orderId' => $request->price,
+            'quantity' => $request->quantity,
+            'productId' => $request->color,
+            'totalPrice' => $request->type,
+            'updateBy' => $request->email
+        ]);
     }
 
     /**
@@ -52,6 +65,10 @@ class UserProductController extends Controller
     public function show($id)
     {
         //
+        //$products = Product::all($id);
+        //return view('UserProducts.shop')->with(['products' => $products]);
+       // return view('products.form-edit')->with(['product' => Product::find($id)]);
+        return view('UserProducts.shop')->with(['products' => Product::find($id)]);
     }
 
     /**
