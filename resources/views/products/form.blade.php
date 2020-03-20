@@ -45,9 +45,7 @@
                                 <p>รูปภาพ</p>
                                 <input placeholder="รูปภาพ" name="image" type="file">
                             </div>
-                            <div class="form-group">
-
-                            </div>
+                            
                             <div class="form-group float-right">
                                 <a href="{{ route('products.index') }}" class="btn btn-danger">ยกเลิก</a>
                                 <button class="btn btn-success" type="submit">ยืนยัน</button>
