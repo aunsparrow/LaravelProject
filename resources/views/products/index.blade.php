@@ -21,6 +21,7 @@
                             <th>ลำดับ</th>
                             <th>รูป</th>
                             <th>ชื่อ</th>
+                            <th>รายละเอียด</th>
                             <th>สี</th>
                             <th>ราคา</th>
                             <th>การจัดการ</th>
@@ -31,9 +32,10 @@
                             <tr>
                                 <td>{{ $index+1 }}</td>
                                 <td>
-                                    <img src="{{ asset($product->image) }}" width="200px">
+                                    <img src="{{ asset($product->image) }}" width="150px">
                                 </td>
                                 <td>{{ $product->productName }}</td>
+                                <td>{{ $product->productDetail }}</td>
                                 <td>{{ $product->color }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>

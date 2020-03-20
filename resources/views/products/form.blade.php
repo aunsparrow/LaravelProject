@@ -16,6 +16,10 @@
                                 <input class="form-control" placeholder="ชื่อสินค้า" name="productName" type="text" required>
                             </div>
                             <div class="form-group">
+                                <label>รายละเอียด</label>
+                                <input class="form-control" placeholder="รายละเอียด" name="detail" type="text" required>
+                            </div>
+                            <div class="form-group">
                                 <label>ราคา</label>
                                 <input class="form-control" placeholder="ราคา" name="price" type="number" required>
                             </div>
