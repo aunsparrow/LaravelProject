@@ -2,7 +2,7 @@
 @section('heading','หน้าแรก')
 @section('content')
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card animated fadeInUp">
                 <div class="card-header">
                     <div class="row">
@@ -15,19 +15,20 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    <div class="table-responsive">
                     <table class="table w-100" id="dataTable1">
                         <thead>
                         <tr>
                             <th>ลำดับ</th>
                             <th>รูป</th>
                             <th>ชื่อ</th>
-                            <th>รายละเอียด</th>
                             <th>สี</th>
+                            <th>จำนวน</th>
                             <th>ราคา</th>
                             <th>การจัดการ</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <!-- <tbody>
                         @foreach($products as $index=>$product)
                             <tr>
                                 <td>{{ $index+1 }}</td>
@@ -35,8 +36,8 @@
                                     <img src="{{ asset($product->image) }}" width="150px">
                                 </td>
                                 <td>{{ $product->productName }}</td>
-                                <td>{{ $product->productDetail }}</td>
                                 <td>{{ $product->color }}</td>
+                                <td>{{ $product->quantity }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>
                                     <div class="row">
@@ -58,10 +59,20 @@
                                 </td>
                             </tr>
                         @endforeach
-                        </tbody>
+                        </tbody> -->
                     </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+@endsection
+@section('script')
+    <script>
+        $(document).ready(function() {
+            $('#dataTable1').DataTable({
+                ajax: '/api/products'
+            });
+        });
+    </script>
 @endsection

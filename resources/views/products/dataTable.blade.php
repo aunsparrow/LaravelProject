@@ -14,6 +14,9 @@
                         <th>ID</th>
                         <th>ชื่อ</th>
                         <th>รูป</th>
+                        <th>aaa</th>
+                        <th>aaa</th>
+                        <th>aaa</th>
                     </tr>
                     </thead>
                 </table>
