@@ -12,7 +12,6 @@ class OrderDetail extends Model
     'productId',
     'quantity',
     'totalPrice',
-    'email',
     'updateBy'
     ];
 }
