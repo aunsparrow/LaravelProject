@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('products','ProductController')->middleware('auth');
 Route::get('/products-dataTable','ProductController@dataTable');
+Route::get('/UserProducts','UserProductController@index');
 
 Route::get('/test',function (){
    return view('test');

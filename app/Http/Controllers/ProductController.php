@@ -55,7 +55,7 @@ class ProductController extends Controller
             ]);
         }
         $creted = Product::create([
-            'name' => $request->productName,
+            'productName' => $request->productName,
             'price' => $request->price,
             'quantity' => $request->quantity,
             'color' => $request->color,
@@ -103,7 +103,7 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $updated = Product::where('id', $id)->update([
-            'name' => $request->productName,
+            'productName' => $request->productName,
             'price' => $request->price,
             'quantity' => $request->quantity,
             'color' => $request->color,
