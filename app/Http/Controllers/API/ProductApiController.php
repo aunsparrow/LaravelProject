@@ -10,12 +10,12 @@ class ProductApiController extends Controller
 {
     function all()
     {
-        $products = Product::select('id','name','image')->get();
+        $products = Product::select('id','productName','image')->get();
         $fetch = ["data" => []];
         foreach ($products as $product){
             array_push($fetch["data"],[
                 $product->id,
-                $product->name,
+                $product->productName,
                 $product->image
             ]);
         }
@@ -25,7 +25,7 @@ class ProductApiController extends Controller
     function create(Request $request)
     {
         $created = Product::create([
-            'name' => $request->name,
+            'productName' => $request->productName,
             'price' => $request->price,
             'quantity' => $request->quantity,
             'color' => $request->color,

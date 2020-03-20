@@ -13,7 +13,7 @@
                             @csrf
                             <div class="form-group">
                                 <label>ชื่อ</label>
-                                <input class="form-control" placeholder="ชื่อสินค้า" name="name" type="text" required>
+                                <input class="form-control" placeholder="ชื่อสินค้า" name="productName" type="text" required>
                             </div>
                             <div class="form-group">
                                 <label>ราคา</label>
@@ -35,7 +35,7 @@
                             </div>
                             <div class="form-group">
                                 <label>ประเภท</label>
-                                <input class="form-control" placeholder="ประเภท" name="type" type="text" required>
+                                <input class="form-control" placeholder="ประเภท" name="productType" type="text" required>
                             </div>
                             <div class="form-group">
                                 <p>รูปภาพ</p>

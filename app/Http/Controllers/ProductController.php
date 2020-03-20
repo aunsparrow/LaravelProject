@@ -60,7 +60,7 @@ class ProductController extends Controller
             'quantity' => $request->quantity,
             'color' => $request->color,
             'type' => $request->type,
-            'image' => 'images/'. $filename,
+            'image' => 'images/'. $filename ?: null,
             'created_by' => $request->createdBy
         ]);
         return redirect(route('products.index'))->with([
